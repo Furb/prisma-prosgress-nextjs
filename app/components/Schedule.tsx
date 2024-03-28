@@ -26,10 +26,7 @@ const Schedule = () => {
     { text: "PROJECT 2", id: 2, color: "#56ca85" },
     { text: "PROJECT 3", id: 3, color: "#df5286" },
   ];
-  const categoryData: Object[] = [
-    { text: "Development", id: 1, color: "#1aaa55" },
-    { text: "Testing", id: 2, color: "#7fa900" },
-  ];
+
   return (
     <>
       <h2>Syncfusion React Schedule Component</h2>
@@ -53,16 +50,6 @@ const Schedule = () => {
             name='Projects'
             allowMultiple={false}
             dataSource={projectData}
-            textField='text'
-            idField='id'
-            colorField='color'
-          ></ResourceDirective>
-          <ResourceDirective
-            field='TaskId'
-            title='Category'
-            name='Categories'
-            allowMultiple={true}
-            dataSource={categoryData}
             textField='text'
             idField='id'
             colorField='color'
