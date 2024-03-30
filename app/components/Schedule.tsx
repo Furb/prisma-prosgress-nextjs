@@ -41,6 +41,14 @@ const Schedule = () => {
     description: {
       title: "Description (optional)",
     },
+    roomData: {
+      title: "Room",
+      name: "roomId",
+      dataSource: roomData,
+      textField: "RoomText",
+      valueField: "Id",
+      colorField: "RoomColor",
+    },
   };
 
   const eventSettings: EventSettingsModel = {
@@ -66,6 +74,7 @@ const Schedule = () => {
         timeFormat='HH:mm'
         eventSettings={eventSettings}
         popupOpen={onPopupOpen}
+        selectedDate={new Date()}
       >
         <ViewsDirective>
           <ViewDirective option='Day' />
