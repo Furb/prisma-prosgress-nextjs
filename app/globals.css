@@ -12,3 +12,16 @@
 @import "./../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "./../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "./../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
+.e-schedule-dialog .e-location-container {
+  display: none;
+}
+
+.e-schedule-dialog .e-all-day-time-zone-row {
+  display: none;
+}
+
+#_recurrence_editor,
+.e-repeat-parent-row {
+  display: none;
+}

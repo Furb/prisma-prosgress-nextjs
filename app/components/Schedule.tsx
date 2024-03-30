@@ -12,20 +12,48 @@ import {
   Inject,
   Resize,
   DragAndDrop,
+  PopupOpenEventArgs,
 } from "@syncfusion/ej2-react-schedule";
 import { timelineResourceData } from "../lib/datasource";
+import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 
 const Schedule = () => {
+  const dataManager = new DataManager({
+    url: "",
+    crudUrl: "",
+    adaptor: new UrlAdaptor(),
+    crossDomain: true,
+  });
+
+  const roomData = [
+    { RoomText: "Room 1", Id: 1, RoomColor: "#ffaa00" },
+    { RoomText: "Room 2", Id: 2, RoomColor: "#f8a398" },
+    { RoomText: "Big room", Id: 3, RoomColor: "#7499e1" },
+  ];
+
+  const fieldsData = {
+    Id: "bookingId",
+    Subject: {
+      name: "Booking",
+      title: "Who is booking",
+      default: "",
+    },
+    description: {
+      title: "Description (optional)",
+    },
+  };
+
   const eventSettings: EventSettingsModel = {
     dataSource: timelineResourceData,
+    fields: fieldsData,
   };
-  const group = { byGroupID: false, resources: ["Projects", "Categories"] };
 
-  const projectData: Object[] = [
-    { text: "PROJECT 1", id: 1, color: "#cb6bb2" },
-    { text: "PROJECT 2", id: 2, color: "#56ca85" },
-    { text: "PROJECT 3", id: 3, color: "#df5286" },
-  ];
+  const onPopupOpen = (args: PopupOpenEventArgs): void => {
+    if (args.type === "QuickInfo") {
+      // Cancel only the quick info pop-up
+      args.cancel = true;
+    }
+  };
 
   return (
     <>
@@ -33,26 +61,27 @@ const Schedule = () => {
       <ScheduleComponent
         width='100%'
         height='550px'
-        currentView='Month'
-        selectedDate={new Date(2018, 3, 4)}
+        startHour='07:00'
+        currentView='Week'
+        timeFormat='HH:mm'
         eventSettings={eventSettings}
-        group={group}
+        popupOpen={onPopupOpen}
       >
         <ViewsDirective>
-          <ViewDirective option='Week' />
-          <ViewDirective option='Month' />
-          <ViewDirective option='Agenda' />
+          <ViewDirective option='Day' />
+          <ViewDirective option='Week' dateFormat='dd-MMM-yyyy' />
+          <ViewDirective option='Month' showWeekNumber={true} />
         </ViewsDirective>
         <ResourcesDirective>
           <ResourceDirective
-            field='ProjectId'
-            title='Choose Project'
-            name='Projects'
+            field='RoomId'
+            title='Choose meeting room'
+            name='Rooms'
             allowMultiple={false}
-            dataSource={projectData}
-            textField='text'
-            idField='id'
-            colorField='color'
+            dataSource={roomData}
+            textField='RoomText'
+            idField='Id'
+            colorField='RoomColor'
           ></ResourceDirective>
         </ResourcesDirective>
         <Inject services={[Week, Month, Agenda, Resize, DragAndDrop]} />
