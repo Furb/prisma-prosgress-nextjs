@@ -75,6 +75,7 @@ const Schedule = () => {
         eventSettings={eventSettings}
         popupOpen={onPopupOpen}
         selectedDate={new Date()}
+        firstDayOfWeek={1}
       >
         <ViewsDirective>
           <ViewDirective option='Day' />
