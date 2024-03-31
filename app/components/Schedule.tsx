@@ -32,7 +32,7 @@ const Schedule = () => {
   ];
 
   const fieldsData = {
-    Id: "bookingId",
+    Id: "BookingId",
     Subject: {
       name: "Booking",
       title: "Who is booking",
