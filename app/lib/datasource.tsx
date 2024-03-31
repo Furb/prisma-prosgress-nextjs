@@ -1,6 +1,6 @@
 export let timelineResourceData: Object[] = [
   {
-    Id: 1,
+    BookingId: 1,
     Subject: "Optimus Prime",
     StartTime: new Date(2024, 2, 30, 14, 43),
     EndTime: new Date(2024, 2, 30, 15, 43),
@@ -9,7 +9,7 @@ export let timelineResourceData: Object[] = [
     Description: "Bring a cup of coffee to a meeting.",
   },
   {
-    Id: 2,
+    BookingId: 2,
     Subject: "Bumblebee",
     StartTime: new Date(2024, 2, 28, 18, 43),
     EndTime: new Date(2024, 2, 28, 21, 43),
@@ -38,7 +38,7 @@ export let timelineResourceData: Object[] = [
     RoomId: 2,
   },
   {
-    Id: 6,
+    BookingId: 6,
     Subject: "Ratchet",
     StartTime: new Date(2024, 2, 30, 19, 13),
     EndTime: new Date(2024, 2, 30, 21, 13),
@@ -59,7 +59,7 @@ export let timelineResourceData: Object[] = [
     RoomId: 3,
   },
   {
-    Id: 9,
+    BookingId: 9,
     Subject: "Grimlock",
     StartTime: new Date(2024, 3, 1, 23, 43),
     EndTime: new Date(2024, 3, 2, 1, 13),
