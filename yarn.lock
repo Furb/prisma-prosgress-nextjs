@@ -279,7 +279,7 @@
   dependencies:
     "@syncfusion/ej2-base" "~25.1.35"
 
-"@syncfusion/ej2-calendars@~25.1.37":
+"@syncfusion/ej2-calendars@25.1.37", "@syncfusion/ej2-calendars@~25.1.37":
   version "25.1.37"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-calendars/-/ej2-calendars-25.1.37.tgz#28665146fa1147e9e28919485331aee8d8b78d15"
   integrity sha512-zr3RiG/uDBZyUoZ7/+F8/pw/hjzDoN6lhqChF1x1ob+X99GFAfLopDudd8CwqSpXbFaLWEf8HHW3FLwrEdmlcg==
@@ -304,7 +304,7 @@
   dependencies:
     "@syncfusion/ej2-base" "~25.1.35"
 
-"@syncfusion/ej2-dropdowns@~25.1.37":
+"@syncfusion/ej2-dropdowns@25.1.37", "@syncfusion/ej2-dropdowns@~25.1.37":
   version "25.1.37"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-dropdowns/-/ej2-dropdowns-25.1.37.tgz#783056100e1e8cf455166cdc10d1e5bac7d71a0b"
   integrity sha512-kKvxXTxweHSgpu9NTeczNC78mdHcRT34rji0QYn+IDm//XQJLaSX68OwUCOXWGmSZxY+fwopYLzzhKnd6lBIhw==
@@ -390,6 +390,24 @@
   integrity sha512-chjK/THRwbRcQTKUL7NyP2VBjtS65uw6e0kieTsQvJ37c3ZZZ3/FpHt9jcqJisStrZ/xp4/y9uSPe6kqBGQBCg==
   dependencies:
     "@syncfusion/ej2-base" "~25.1.35"
+
+"@syncfusion/ej2-react-calendars@^25.1.37":
+  version "25.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-calendars/-/ej2-react-calendars-25.1.37.tgz#4a688d003d7ba31b9138c924e7cb6277db864a87"
+  integrity sha512-vS/annytjh+KDGDdMggXJLn5coS/+sPJbeSbAAZ4xYEPRTZQospEBNVqDXQ34iSWVdukC7yCXkAF8poEM+fmyA==
+  dependencies:
+    "@syncfusion/ej2-base" "~25.1.35"
+    "@syncfusion/ej2-calendars" "25.1.37"
+    "@syncfusion/ej2-react-base" "~25.1.35"
+
+"@syncfusion/ej2-react-dropdowns@^25.1.37":
+  version "25.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-dropdowns/-/ej2-react-dropdowns-25.1.37.tgz#d647e2f7a0531115d80866e8d5414173dbca412d"
+  integrity sha512-LSJW+gBSvmQ3vvodIBl3XjqRUwYdgNw9/QCTJ7Pwc4FGJlJMAD8GRFrDWKgKaxX8qUK/u9hIExC/f48N6bVW0g==
+  dependencies:
+    "@syncfusion/ej2-base" "~25.1.35"
+    "@syncfusion/ej2-dropdowns" "25.1.37"
+    "@syncfusion/ej2-react-base" "~25.1.35"
 
 "@syncfusion/ej2-react-schedule@^25.1.37":
   version "25.1.37"
